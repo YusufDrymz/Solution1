@@ -26,7 +26,9 @@ namespace Deneme
             Yaz(1, "deneme", 2, 25f, 26.5);
             Yaz(0, 1, 2, 3, 'c');
             Yaz(1);
+            Console.ReadLine(); 
             Console.ReadLine();
+
         }
     }
 }
