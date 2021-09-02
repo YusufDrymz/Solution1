@@ -10,6 +10,33 @@ namespace Interface
     {
         static void Main(string[] args)
         {
+            //IntarfacesIntro();
+
+            //Demo();
+
+            ICustomerDal[] customerDals = new ICustomerDal[3]
+            {
+                new SqlServerCustomerDal(),
+                new OracleCustomerDal(),
+                new MySqlCustomerDal()
+            };
+
+            foreach (var customerDal in customerDals)
+            {
+                customerDal.Add();
+            }
+
+            Console.ReadLine();
+        }
+
+        private static void Demo()
+        {
+            CustomerManager customerManager = new CustomerManager();
+            customerManager.Add(new OracleCustomerDal());
+        }
+
+        private static void IntarfacesIntro()
+        {
             PersonManager manager = new PersonManager();
             Customer customer = new Customer
             {
@@ -28,7 +55,6 @@ namespace Interface
             };
             manager.Add(customer);
             manager.Add(student);
-            Console.ReadLine();
         }
 
         interface IPerson
