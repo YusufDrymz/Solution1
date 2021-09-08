@@ -16,7 +16,7 @@ namespace ConsoleApp1
             long number2 = 1231212125441274644;
             short number3 = -4646;
             byte number4 = 255;
-            bool c = true;
+           // bool c = true;
             char a = 'A';
             double number5 = 10.4;
             decimal number6 = 10.36453354m;
