@@ -47,6 +47,9 @@ namespace EntityFrameworkDemo
             this.tbxUnitPrice = new System.Windows.Forms.TextBox();
             this.tbxName = new System.Windows.Forms.TextBox();
             this.unitPrice = new System.Windows.Forms.Label();
+            this.tbxSearch = new System.Windows.Forms.TextBox();
+            this.lblSearch = new System.Windows.Forms.Label();
+            this.tbxGetById = new System.Windows.Forms.Button();
             this.gbxUpdate.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.dgwProducts)).BeginInit();
             this.gbxAdd.SuspendLayout();
@@ -54,7 +57,7 @@ namespace EntityFrameworkDemo
             // 
             // btnRemove
             // 
-            this.btnRemove.Location = new System.Drawing.Point(264, 375);
+            this.btnRemove.Location = new System.Drawing.Point(14, 372);
             this.btnRemove.Name = "btnRemove";
             this.btnRemove.Size = new System.Drawing.Size(130, 23);
             this.btnRemove.TabIndex = 14;
@@ -222,11 +225,41 @@ namespace EntityFrameworkDemo
             this.unitPrice.TabIndex = 5;
             this.unitPrice.Text = "Unit Price";
             // 
+            // tbxSearch
+            // 
+            this.tbxSearch.Location = new System.Drawing.Point(516, 374);
+            this.tbxSearch.Name = "tbxSearch";
+            this.tbxSearch.Size = new System.Drawing.Size(117, 20);
+            this.tbxSearch.TabIndex = 16;
+            this.tbxSearch.TextChanged += new System.EventHandler(this.tbxSearch_TextChanged);
+            // 
+            // lblSearch
+            // 
+            this.lblSearch.AutoSize = true;
+            this.lblSearch.Location = new System.Drawing.Point(448, 377);
+            this.lblSearch.Name = "lblSearch";
+            this.lblSearch.Size = new System.Drawing.Size(41, 13);
+            this.lblSearch.TabIndex = 17;
+            this.lblSearch.Text = "Search";
+            // 
+            // tbxGetById
+            // 
+            this.tbxGetById.Location = new System.Drawing.Point(150, 372);
+            this.tbxGetById.Name = "tbxGetById";
+            this.tbxGetById.Size = new System.Drawing.Size(108, 23);
+            this.tbxGetById.TabIndex = 18;
+            this.tbxGetById.Text = "Get By Id";
+            this.tbxGetById.UseVisualStyleBackColor = true;
+            this.tbxGetById.Click += new System.EventHandler(this.tbxGetById_Click);
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(645, 410);
+            this.Controls.Add(this.tbxGetById);
+            this.Controls.Add(this.lblSearch);
+            this.Controls.Add(this.tbxSearch);
             this.Controls.Add(this.btnRemove);
             this.Controls.Add(this.gbxUpdate);
             this.Controls.Add(this.dgwProducts);
@@ -240,6 +273,7 @@ namespace EntityFrameworkDemo
             this.gbxAdd.ResumeLayout(false);
             this.gbxAdd.PerformLayout();
             this.ResumeLayout(false);
+            this.PerformLayout();
 
         }
 
@@ -263,6 +297,9 @@ namespace EntityFrameworkDemo
         private System.Windows.Forms.TextBox tbxUnitPrice;
         private System.Windows.Forms.TextBox tbxName;
         private System.Windows.Forms.Label unitPrice;
+        private System.Windows.Forms.TextBox tbxSearch;
+        private System.Windows.Forms.Label lblSearch;
+        private System.Windows.Forms.Button tbxGetById;
     }
 }
 
